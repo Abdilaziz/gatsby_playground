@@ -5,18 +5,18 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-helmet`, // provides support for server rendering data in React Helmet. Controls document head using their React component. Allows Attributes you add in the component (title, meta, attributes, etc) will get added to the static HTML pages Gatsby builds. (Important for viewers and for SEO. Title and description Metadata stored in document head is a key part of Google Search Results)
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-source-filesystem`, // Sourcing data into your Gatsby application from your local filesystem. Creates File nodes from files, and 'transformer' plugins can transform File nodes into various types of data. Can be queried in GraphQL
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`, // creates ImageSharp nodes from img types for processing (resize, crop, create responsive images, compression)
+    `gatsby-plugin-sharp`, // image processing exposed. shouldnt be used directly, mostly used for other plugins like transformer-sharp
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-plugin-manifest`, // web app manifest (part of PWA specification). Allows adding site to homescreen on mobile browsers. Also Supports: auto icon generation, Favicon support, Cache busting
       options: {
         name: `gatsby-starter-default`,
         short_name: `starter`,

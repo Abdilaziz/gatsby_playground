@@ -1,0 +1,8 @@
+/*  Name of .module.css is used to tell Gatsby this file 
+should be processed as a CSS Module rather than plain CSS
+*/
+
+.container {
+    margin: 3rem auto;
+    max-width: 600px;
+  }
