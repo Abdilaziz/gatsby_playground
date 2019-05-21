@@ -5,15 +5,17 @@ import Container from "../components/container"
 console.log(styles)
 
 // If components are only used in one file, defineling it inline is fine
-const User = (props = (
-  <div className={styles.user}>
-    <img src={props.avatar} className={styles.avatar} alt="" />
-    <div className={styles.description}>
-      <h2 className={styles.username}>{props.username}</h2>
-      <p className={styles.excerpt}>{props.excerpt}</p>
+const User = props => {
+  return (
+    <div className={styles.user}>
+      <img src={props.avatar} className={styles.avatar} alt="" />
+      <div className={styles.description}>
+        <h2 className={styles.username}>{props.username}</h2>
+        <p className={styles.excerpt}>{props.excerpt}</p>
+      </div>
     </div>
-  </div>
-))
+  )
+}
 
 export default () => (
   <Container>
