@@ -35,7 +35,9 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    allFile {
+    allFile(
+      filter: { sourceInstanceName: { eq: "src" }, extension: { eq: "md" } }
+    ) {
       edges {
         node {
           relativePath

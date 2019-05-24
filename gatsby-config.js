@@ -13,6 +13,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`, // Sourcing data into your Gatsby application from your local filesystem. Creates File nodes from files, and 'transformer' plugins can transform File nodes into various types of data. Can be queried in GraphQL
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`, // creates ImageSharp nodes from img types for processing (resize, crop, create responsive images, compression)
     `gatsby-plugin-sharp`, // image processing exposed. shouldnt be used directly, mostly used for other plugins like transformer-sharp
     {
